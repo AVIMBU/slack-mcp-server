@@ -1,9 +1,10 @@
 FROM node:23-alpine
 
 WORKDIR /app
-
-# Copy package files
 COPY package*.json ./
+COPY tsconfig.json ./
+COPY index.ts ./
+COPY slack/ ./slack/
 
 # Install dependencies
 RUN npm install
