@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
-    "rootDir": ".",
+    "rootDir": "./src",
     "target": "ES2020",
     "module": "ESNext",
     "moduleResolution": "node",
@@ -10,8 +10,6 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": [
-    "./**/*.ts"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
-  
