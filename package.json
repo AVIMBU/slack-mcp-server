@@ -1,0 +1,29 @@
+{
+    "name": "slack-model-context-protocol-server",
+    "version": "0.0.1",
+    "description": "MCP Interaction Server for Slack Workspaces",
+    "license": "MIT",
+    "author": "AVIMBU FlexCo, Austria avimbu.com",
+    "homepage": "https://avimbu.com",
+    "type": "module",
+    "bin": {
+        "mcp-slack-server": "dist/index.js"
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsc && shx chmod +x dist/*.js",
+        "prepare": "npm run build",
+        "watch": "tsc --watch"
+    },
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "1.7.0",
+        "@types/node": "^22"
+    },
+    "devDependencies": {
+        "@types/node": "^22",
+        "shx": "^0.3.4",
+        "typescript": "^5.8.2"
+    }
+}

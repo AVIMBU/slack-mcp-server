@@ -1,0 +1,19 @@
+build:
+  dockerBuildPath: ../../
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - slackBotUserOauthToken
+      - slackTeamId
+    properties:
+      slackBotUserOauthToken:
+        type: string
+        description: The OAuth Token of your Slack's App User.
+      slackTeamId:
+        type: string
+        description: The Slack Team ID of the workspace.
+  commandFunction:
+    |-
+    (config) => ({ command: 'node', args: ['dist/index.js'], env: { SLACK_BOT_USER_OAUTH_TOKEN: config.slackBotToken, SLACK_TEAM_ID: config.slackTeamId } })
