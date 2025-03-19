@@ -1,5 +1,3 @@
-build:
-  dockerBuildPath: ../../
 startCommand:
   type: stdio
   configSchema:
